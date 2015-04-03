@@ -1,0 +1,10 @@
+#header {display: table-row;}
+#header > h1,
+#header > ul > li {display: table-cell;}
+
+#header > h1 {padding-top: 0.5em;}
+#header > ul > li {padding: 1ex;}
+
+#header > h1 > a,
+#header > ul > li.active > a {color: #000;}
+#header > ul > li.active {font-weight: bolder;}
