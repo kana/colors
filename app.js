@@ -24,6 +24,10 @@ angular.module('Colors', [])
     return {x: x, y: y};
   }
 
+  function makeJoker() {
+    return {joker: true};
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
