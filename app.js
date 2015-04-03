@@ -16,6 +16,10 @@ angular.module('Colors', [])
     };
   }
 
+  function listMoves(board, players, turn) {
+    return [];  // TODO: Implement.
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
