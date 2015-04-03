@@ -3,6 +3,10 @@ angular.module('Colors', [])
   var numberOfPlayers = 2;  // TODO: Make it customizable at runtime.
   var N = 5;
 
+  function random(n) {
+    return Math.floor(Math.random() * n);
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
