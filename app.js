@@ -7,6 +7,15 @@ angular.module('Colors', [])
     return Math.floor(Math.random() * n);
   }
 
+  function makeGameTree(board, players, turn) {
+    return {
+      board: board,
+      players: players,
+      turn: turn,
+      moves: listMoves(board, players, turn)
+    };
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
