@@ -7,6 +7,16 @@ angular.module('Colors', [])
     return Math.floor(Math.random() * n);
   }
 
+  function shuffleInPlace(xs) {
+    var n = xs.length;
+    for (var i = n - 1; 1 <= i; n--) {
+      var j = random(i + 1);
+      var t = xs[i];
+      xs[i] = xs[j];
+      xs[j] = t;
+    }
+  }
+
   function makeGameTree(board, players, turn) {
     return {
       board: board,
