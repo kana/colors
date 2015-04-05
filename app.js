@@ -32,6 +32,9 @@ angular.module('Colors', [])
   }
 
   function listMoves(board, players, turn) {
+    if (players.every(function (p) {return p.hand.length === 0;}))
+      return [];
+
     return [];  // TODO: Implement.
   }
 
