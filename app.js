@@ -42,13 +42,13 @@ angular.module('Colors', [])
   function makeCardSet() {
     var baseCards = [];
     for (var i = 0; i < N; i++)
-      baseCards.push(makeCard(i, i));
+      baseCards.push(makeCard(COLORS[i], COLORS[i]));
 
     var freeCards = [];
     for (var x = 0; x < N; x++) {
       for (var y = 0; y < N; y++) {
         if (x != y)
-          freeCards.push(makeCard(x, y));
+          freeCards.push(makeCard(COLORS[x], COLORS[y]));
       }
     }
     freeCards.push(makeJoker());
