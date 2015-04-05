@@ -8,7 +8,7 @@ angular.module('Colors', [])
     return Math.floor(Math.random() * n);
   }
 
-  function shuffleInPlace(xs) {
+  function shuffleX(ys) {
     var n = xs.length;
     for (var i = n - 1; 1 <= i; n--) {
       var j = random(i + 1);
