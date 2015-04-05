@@ -18,6 +18,10 @@ angular.module('Colors', [])
     }
   }
 
+  function repeat(x, n) {
+    return new Array(n).map(function () {return x;});
+  }
+
   function makeGameTree(board, players, turn) {
     return {
       board: board,
