@@ -90,7 +90,22 @@ angular.module('Colors', [])
   }
 
   function makeInitialGameTree() {
-    // TODO: Implement.
+    var board = makeEmptyBoard();
+    var cardSet = makeCardSet();
+
+    shuffleX(cardSet.baseCards);
+    shuffleX(cardSet.freeCards);
+
+    // TODO: Support another initial board layout.
+    for (var i = 0; i < cardSet.baseCards.length; i++)
+      putX(cardSet.baseCards[i], i, i, board);
+
+    var players = [];
+    var m = cardSet.freeCards.length / numberOfPlayers;
+    for (var i = 0; i < numberOfPlayers; i++)
+      players.push({hand: cardSet.freeCards.slice(i * m, (i + 1) * m)});
+
+    return makeGameTree(board, players, 0);
   }
 
   return {
