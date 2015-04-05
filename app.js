@@ -35,8 +35,8 @@ angular.module('Colors', [])
     return [];  // TODO: Implement.
   }
 
-  function makeCard(columnColor, rowColor) {
-    return {columnColor: columnColor, rowColor: rowColor};
+  function makeCard(xColor, yColor) {
+    return {xColor: xColor, yColor: yColor};
   }
 
   function makeJoker() {
@@ -70,8 +70,8 @@ angular.module('Colors', [])
   function makeEmptyBoard() {
     return {
       cells: repeat(false, N * N),
-      columnColors: repeat(false, N),
-      rowColors: repeat(false, N)
+      xColors: repeat(false, N),
+      yColors: repeat(false, N)
     };
   }
 
