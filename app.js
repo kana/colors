@@ -22,6 +22,19 @@ angular.module('Colors', [])
     return new Array(n).map(function () {return x;});
   }
 
+  function delay(expressionAsFunction) {
+    var result;
+    var isEvaluated = false;
+
+    return function () {
+      if (!isEvaluated) {
+        result = expressionAsFunction();
+        isEvaluated = true;
+      }
+      return result;
+    };
+  }
+
   function makeGameTree(board, players, turn) {
     return {
       board: board,
