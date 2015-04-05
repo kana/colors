@@ -35,6 +35,10 @@ angular.module('Colors', [])
     };
   }
 
+  function force(promise) {
+    return promise();
+  }
+
   function makeGameTree(board, players, turn) {
     return {
       board: board,
