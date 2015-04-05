@@ -75,6 +75,12 @@ angular.module('Colors', [])
     };
   }
 
+  function canPut(card, x, y, board) {
+    return !board.cells[ix(x, y)] &&
+           (!board.xColors[x] || board.xColors[x] === card.xColor) &&
+           (!board.yColors[y] || board.yColors[y] === card.yColor);
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
