@@ -39,6 +39,10 @@ angular.module('Colors', [])
     return promise();
   }
 
+  function copyDeeply(x) {
+    return JSON.parse(JSON.stringify(x));
+  }
+
   function makeGameTree(board, players, turn) {
     return {
       board: board,
