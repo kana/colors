@@ -101,7 +101,7 @@ angular.module('Colors', [])
       putX(cardSet.baseCards[i], i, i, board);
 
     var players = [];
-    var m = cardSet.freeCards.length / numberOfPlayers;
+    var m = Math.floor(cardSet.freeCards.length / numberOfPlayers);
     for (var i = 0; i < numberOfPlayers; i++)
       players.push({hand: cardSet.freeCards.slice(i * m, (i + 1) * m)});
 
