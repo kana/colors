@@ -81,6 +81,14 @@ angular.module('Colors', [])
            (!board.yColors[y] || board.yColors[y] === card.yColor);
   }
 
+  function putX(card, x, y, board) {
+    board.cells[ix(x, y)] = card;
+    if (!board.xColors[x])
+      board.xColors[x] = card.xColor;
+    if (!board.yColors[y])
+      board.yColors[y] = card.yColor;
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
