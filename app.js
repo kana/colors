@@ -35,7 +35,38 @@ angular.module('Colors', [])
     if (players.every(function (p) {return p.hand.length === 0;}))
       return [];
 
-    return [];  // TODO: Implement.
+    var p = players[turn];
+    var moves =
+      p.hand.filter(function (c) {return canPlay(c, board);})
+      .map(function (c) {
+        return {
+          card: c,
+          gameTreePromise: delay(function () {
+            var board = copyDeeply(board);
+            var players = copyDeeply(players);
+            playX(c, board, players, turn);
+            return makeGameTree(board, players, advanceTurn(turn));
+          })
+        };
+      });
+    if (moves.length !== 0) {
+      return moves;
+    } else {
+      return {
+        pass: true,
+        gameTreePromise: delay(function () {
+          return makeGameTree(board, players, advanceTurn(turn));
+        })
+      };
+    }
+  }
+
+  function canPlay(card, board) {
+    return false;  // TODO: Implement.
+  }
+
+  function playX(card, board, players, turn) {
+    // TODO: Implement.
   }
 
   function makeCard(xColor, yColor) {
