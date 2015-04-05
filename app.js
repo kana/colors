@@ -58,6 +58,10 @@ angular.module('Colors', [])
     };
   }
 
+  function ix(x, y) {
+    return x + N * y;
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
