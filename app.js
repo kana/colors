@@ -2,6 +2,7 @@ angular.module('Colors', [])
 .service('GameEngine', function () {
   var numberOfPlayers = 2;  // TODO: Make it customizable at runtime.
   var N = 5;
+  var COLORS = 'WUBRG';
 
   function random(n) {
     return Math.floor(Math.random() * n);
