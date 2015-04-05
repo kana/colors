@@ -31,8 +31,8 @@ angular.module('Colors', [])
     return [];  // TODO: Implement.
   }
 
-  function makeCard(x, y) {
-    return {x: x, y: y};
+  function makeCard(columnColor, rowColor) {
+    return {columnColor: columnColor, rowColor: rowColor};
   }
 
   function makeJoker() {
