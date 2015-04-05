@@ -67,6 +67,14 @@ angular.module('Colors', [])
     return x + N * y;
   }
 
+  function makeEmptyBoard() {
+    return {
+      cells: repeat(false, N * N),
+      columnColors: repeat(false, N),
+      rowColors: repeat(false, N)
+    };
+  }
+
   function makeInitialGameTree() {
     // TODO: Implement.
   }
